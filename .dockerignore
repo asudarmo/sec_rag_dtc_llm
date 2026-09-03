@@ -1,0 +1,15 @@
+.venv
+.git
+.env
+__pycache__
+*.pyc
+.pytest_cache
+.claude
+
+# Large, re-downloadable, not needed at app runtime
+data/raw/
+*.duckdb
+
+# Dev-only, not needed in the running app image
+tests/
+eval/results/

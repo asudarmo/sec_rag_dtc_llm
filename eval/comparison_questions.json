@@ -1,0 +1,17 @@
+[
+  {"question": "Compare the main AI-related risk factors between tech and banking companies", "type": "sector"},
+  {"question": "How do tech and banking companies differ in their approach to regulatory compliance risk?", "type": "sector"},
+  {"question": "Compare cybersecurity risk disclosures between tech and banking companies", "type": "sector"},
+  {"question": "How does competition risk differ between tech and banking companies?", "type": "sector"},
+  {"question": "Compare how tech and banking companies describe risks from third-party vendors and partners", "type": "sector"},
+  {"question": "Compare data privacy risk factors between tech and banking companies", "type": "sector"},
+  {"question": "How do tech and banking companies differ in their discussion of talent and workforce risk?", "type": "sector"},
+  {"question": "Compare Google vs Microsoft's AI risk factors", "type": "company"},
+  {"question": "Compare JPMorgan vs Goldman Sachs's risk factors related to market volatility", "type": "company"},
+  {"question": "Compare Nvidia vs Google's risk factors related to export controls and trade regulation", "type": "company"},
+  {"question": "Compare Bank of America vs JPMorgan's credit risk disclosures", "type": "company"},
+  {"question": "Compare Microsoft vs Nvidia's supply chain risk factors", "type": "company"},
+  {"question": "Compare Goldman Sachs vs Bank of America's regulatory capital risk factors", "type": "company"},
+  {"question": "Compare Google vs Nvidia's risk factors related to competition", "type": "company"},
+  {"question": "Compare JPMorgan vs Microsoft's risk factors related to cybersecurity", "type": "company"}
+]

@@ -1,0 +1,35 @@
+[project]
+name = "sec-rag-dtc-llm"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.12"
+dependencies = [
+    "beautifulsoup4>=4.15.0",
+    "chromadb>=1.5.9",
+    "dlt[postgres]>=1.30.0",
+    "google-genai>=2.21.0",
+    "langchain-text-splitters>=1.1.2",
+    "pandas>=3.0.5",
+    "psycopg2-binary>=2.9.12",
+    "python-dotenv>=1.2.3",
+    "rank-bm25>=0.2.2",
+    "sec-edgar-downloader>=5.1.0",
+    "sentence-transformers>=6.0.1",
+    "streamlit>=1.63.0",
+]
+
+[dependency-groups]
+dev = [
+    "duckdb>=1.5.5",
+    "pytest>=9.1.1",
+]
+
+# Note: torch (a transitive dep via sentence-transformers) is NOT pinned to the
+# CPU-only wheel index here. [tool.uv.sources] + [[tool.uv.index]] is the
+# documented way to do this, but it didn't take effect for this uv version for
+# reasons not fully root-caused (config never appeared in a full verbose
+# resolver trace, despite matching uv's own docs exactly). The Dockerfile
+# instead installs torch separately via `uv pip install --index-url .../cpu
+# torch` after `uv sync --no-install-package torch` — confirmed working. Local
+# dev (this lockfile) still resolves the default (CUDA-inclusive) wheel; only
+# the Docker image is CPU-only.

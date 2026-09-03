@@ -1,0 +1,25 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Secrets — never commit
+.env
+
+# Raw SEC filings are large (~227MB) and re-downloadable — do not commit
+data/raw/
+# NOTE: data/processed/chunks.json and chroma_db/ ARE committed on purpose,
+# so a fresh clone has a working vector store without re-downloading/re-embedding.
+
+# Local dlt dry-run artifact (--destination duckdb) — the real pipeline targets Postgres
+*.duckdb
+
+.claude/
+CLAUDE.md
+PLAN.md

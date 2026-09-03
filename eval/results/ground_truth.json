@@ -1,0 +1,752 @@
+[
+  {
+    "question": "What were the primary factors that contributed to the growth in the company's net income between 2024 and 2025?",
+    "chunk_id": "BAC_0000070858-26-000157_228",
+    "ticker": "BAC"
+  },
+  {
+    "question": "What are the primary international regulatory frameworks that govern the company's derivatives trading activities?",
+    "chunk_id": "BAC_0000070858-26-000157_51",
+    "ticker": "BAC"
+  },
+  {
+    "question": "How does the company determine the fair value for financial instruments that lack observable market data?",
+    "chunk_id": "BAC_0000070858-26-000157_563",
+    "ticker": "BAC"
+  },
+  {
+    "question": "How does the company monitor and manage the potential financial risks associated with its trading operations?",
+    "chunk_id": "BAC_0000070858-26-000157_501",
+    "ticker": "BAC"
+  },
+  {
+    "question": "How was the U.S. commercial loan portfolio distributed across the company's business segments at the end of 2025?",
+    "chunk_id": "BAC_0000070858-26-000157_457",
+    "ticker": "BAC"
+  },
+  {
+    "question": "What primary factors contributed to the growth of client assets managed by the firm between the end of 2024 and 2025?",
+    "chunk_id": "BAC_0000070858-26-000157_285",
+    "ticker": "BAC"
+  },
+  {
+    "question": "How much capital did the company allocate toward buying back its own shares during the final quarter of 2025?",
+    "chunk_id": "BAC_0000070858-26-000157_209",
+    "ticker": "BAC"
+  },
+  {
+    "question": "How could international tax policy shifts and new global minimum tax standards impact the company's financial performance?",
+    "chunk_id": "BAC_0000070858-26-000157_178",
+    "ticker": "BAC"
+  },
+  {
+    "question": "What is the total value of the company's outstanding commitments to acquire auto loans and leases from its strategic partner?",
+    "chunk_id": "BAC_0000070858-26-000157_864",
+    "ticker": "BAC"
+  },
+  {
+    "question": "How could shifts in Federal Reserve interest rate policies or broader U.S. fiscal and regulatory changes negatively influence the company's financial performance?",
+    "chunk_id": "BAC_0000070858-26-000157_65",
+    "ticker": "BAC"
+  },
+  {
+    "question": "What external macroeconomic and geopolitical factors could potentially influence the company's financial performance and profit margins?",
+    "chunk_id": "BAC_0000070858-26-000157_61",
+    "ticker": "BAC"
+  },
+  {
+    "question": "What are the potential risks to the company's deposit stability and overall financial performance resulting from the rise of digital assets and nonbank financial services?",
+    "chunk_id": "BAC_0000070858-26-000157_191",
+    "ticker": "BAC"
+  },
+  {
+    "question": "How did the overall credit performance of the company's commercial loan portfolio change throughout 2025?",
+    "chunk_id": "BAC_0000070858-26-000157_447",
+    "ticker": "BAC"
+  },
+  {
+    "question": "How does the company handle indirect risks associated with international business activities like client clearing or secured financing?",
+    "chunk_id": "BAC_0000070858-26-000157_476",
+    "ticker": "BAC"
+  },
+  {
+    "question": "How does the company distribute the expenses associated with shared corporate services across its various business units?",
+    "chunk_id": "BAC_0000070858-26-000157_1034",
+    "ticker": "BAC"
+  },
+  {
+    "question": "What specific obligations does the Gramm-Leach-Bliley Act impose on Bank of America regarding the management of customer data?",
+    "chunk_id": "BAC_0000070858-26-000157_54",
+    "ticker": "BAC"
+  },
+  {
+    "question": "What is the nature of the relationship between Bank of America and its finance subsidiary, BofA Finance LLC, regarding the debt securities issued by the latter?",
+    "chunk_id": "BAC_0000070858-26-000157_407",
+    "ticker": "BAC"
+  },
+  {
+    "question": "How much capital did the company distribute to other financial institutions regarding its lending commitments at the end of 2024 and 2025?",
+    "chunk_id": "BAC_0000070858-26-000157_859",
+    "ticker": "BAC"
+  },
+  {
+    "question": "What was the total value of non-cash collateral held against derivative assets at the end of 2025 and 2024?",
+    "chunk_id": "BAC_0000070858-26-000157_451",
+    "ticker": "BAC"
+  },
+  {
+    "question": "How does the company manage the risk associated with the principal protection feature in its qualified retirement program?",
+    "chunk_id": "BAC_0000070858-26-000157_919",
+    "ticker": "BAC"
+  },
+  {
+    "question": "How did the company determine the fair value of its reporting unit during the 2025 assessment?",
+    "chunk_id": "BAC_0000070858-26-000157_569",
+    "ticker": "BAC"
+  },
+  {
+    "question": "Where can I find the company's official governance documents and regulatory filings?",
+    "chunk_id": "BAC_0000070858-26-000157_13",
+    "ticker": "BAC"
+  },
+  {
+    "question": "How does the company ensure that its risk management practices remain effective and compliant with established internal standards?",
+    "chunk_id": "BAC_0000070858-26-000157_326",
+    "ticker": "BAC"
+  },
+  {
+    "question": "What is the total value of the company's ongoing obligations to acquire auto financing assets from its business partner?",
+    "chunk_id": "BAC_0000070858-26-000157_865",
+    "ticker": "BAC"
+  },
+  {
+    "question": "How does the company handle the netting of derivative assets and liabilities when dealing with counterparty defaults?",
+    "chunk_id": "BAC_0000070858-26-000157_696",
+    "ticker": "BAC"
+  },
+  {
+    "question": "Why might historical financial performance be an unreliable indicator of how the company will perform in the future?",
+    "chunk_id": "GOOGL_0001652044-26-000018_142",
+    "ticker": "GOOGL"
+  },
+  {
+    "question": "What are the potential risks associated with the company's debt obligations and investment portfolio?",
+    "chunk_id": "GOOGL_0001652044-26-000018_79",
+    "ticker": "GOOGL"
+  },
+  {
+    "question": "How do global content moderation regulations and child safety laws impact the operational capabilities of platforms like YouTube and Google Search?",
+    "chunk_id": "GOOGL_0001652044-26-000018_110",
+    "ticker": "GOOGL"
+  },
+  {
+    "question": "What is the company's outlook regarding the recoverability of its state and federal tax credit carryforwards?",
+    "chunk_id": "GOOGL_0001652044-26-000018_390",
+    "ticker": "GOOGL"
+  },
+  {
+    "question": "What are the primary components that make up the advertising income for Google?",
+    "chunk_id": "GOOGL_0001652044-26-000018_172",
+    "ticker": "GOOGL"
+  },
+  {
+    "question": "What are the primary business risks associated with the company's expansion into experimental sectors like transportation and life sciences?",
+    "chunk_id": "GOOGL_0001652044-26-000018_52",
+    "ticker": "GOOGL"
+  },
+  {
+    "question": "What are the potential financial and operational risks associated with the company's current focus on artificial intelligence and infrastructure expansion?",
+    "chunk_id": "GOOGL_0001652044-26-000018_47",
+    "ticker": "GOOGL"
+  },
+  {
+    "question": "What were the primary factors contributing to the rise in research and development spending between 2024 and 2025?",
+    "chunk_id": "GOOGL_0001652044-26-000018_194",
+    "ticker": "GOOGL"
+  },
+  {
+    "question": "What are the potential risks associated with the company's ongoing investments in hardware products like wearables and smartphones?",
+    "chunk_id": "GOOGL_0001652044-26-000018_49",
+    "ticker": "GOOGL"
+  },
+  {
+    "question": "Where can I find details regarding the company's tax obligations and the breakdown of their effective tax rate?",
+    "chunk_id": "GOOGL_0001652044-26-000018_183",
+    "ticker": "GOOGL"
+  },
+  {
+    "question": "What are the primary components that make up the revenue streams for Google Cloud?",
+    "chunk_id": "GOOGL_0001652044-26-000018_176",
+    "ticker": "GOOGL"
+  },
+  {
+    "question": "What was the total fair value and unrealized loss for the company's investment portfolio as of the end of 2024, broken down by how long the securities were held in a loss position?",
+    "chunk_id": "GOOGL_0001652044-26-000018_309",
+    "ticker": "GOOGL"
+  },
+  {
+    "question": "What are the potential financial risks associated with the company's stock repurchase and dividend policies?",
+    "chunk_id": "GOOGL_0001652044-26-000018_135",
+    "ticker": "GOOGL"
+  },
+  {
+    "question": "How does the company account for increases in its credit loss reserves versus sales credit adjustments?",
+    "chunk_id": "GOOGL_0001652044-26-000018_413",
+    "ticker": "GOOGL"
+  },
+  {
+    "question": "What are the primary software and hardware offerings provided by Alphabet under its Google Services division?",
+    "chunk_id": "GOOGL_0001652044-26-000018_22",
+    "ticker": "GOOGL"
+  },
+  {
+    "question": "How does the company calculate diluted earnings per share in relation to its different classes of stock and equity-based awards?",
+    "chunk_id": "GOOGL_0001652044-26-000018_373",
+    "ticker": "GOOGL"
+  },
+  {
+    "question": "What are the primary risks and challenges associated with the company's investments in private firms?",
+    "chunk_id": "GOOGL_0001652044-26-000018_235",
+    "ticker": "GOOGL"
+  },
+  {
+    "question": "How does the company determine the fair value of its financial assets and liabilities when market data is limited?",
+    "chunk_id": "GOOGL_0001652044-26-000018_274",
+    "ticker": "GOOGL"
+  },
+  {
+    "question": "What are the potential business risks associated with the company's reliance on trade secrets and the possibility of losing trademark protection for its brand name?",
+    "chunk_id": "GOOGL_0001652044-26-000018_63",
+    "ticker": "GOOGL"
+  },
+  {
+    "question": "What were the primary drivers behind the rise in Alphabet's total cost of revenues between 2024 and 2025?",
+    "chunk_id": "GOOGL_0001652044-26-000018_193",
+    "ticker": "GOOGL"
+  },
+  {
+    "question": "What methods does Alphabet use to safeguard its technological innovations and brand identity?",
+    "chunk_id": "GOOGL_0001652044-26-000018_40",
+    "ticker": "GOOGL"
+  },
+  {
+    "question": "How does the company calculate the allowance for credit losses on its assets and where are convertible notes reported on the balance sheet?",
+    "chunk_id": "GOOGL_0001652044-26-000018_282",
+    "ticker": "GOOGL"
+  },
+  {
+    "question": "How does Alphabet approach the identification and mitigation of potential digital security threats?",
+    "chunk_id": "GOOGL_0001652044-26-000018_150",
+    "ticker": "GOOGL"
+  },
+  {
+    "question": "Where can I find the specific performance stock unit agreement templates for Alphabet's non-CEO employees from 2023?",
+    "chunk_id": "GOOGL_0001652044-26-000018_424",
+    "ticker": "GOOGL"
+  },
+  {
+    "question": "What was the total notional value of the company's credit derivatives at the end of 2025, and what do these obligations represent?",
+    "chunk_id": "GOOGL_0001652044-26-000018_321",
+    "ticker": "GOOGL"
+  },
+  {
+    "question": "What legal challenges is GS Asia currently facing regarding its involvement in the MINISO initial public offering?",
+    "chunk_id": "GS_0000886982-26-000091_1266",
+    "ticker": "GS"
+  },
+  {
+    "question": "What procedures does the company follow when an operational risk incident occurs to prevent it from happening again?",
+    "chunk_id": "GS_0000886982-26-000091_740",
+    "ticker": "GS"
+  },
+  {
+    "question": "How does the Capital Framework determine the regulatory capital obligations for GS Bank USA?",
+    "chunk_id": "GS_0000886982-26-000091_1182",
+    "ticker": "GS"
+  },
+  {
+    "question": "How did the company's financial performance in 2025 compare to the previous year in terms of net earnings and earnings per share?",
+    "chunk_id": "GS_0000886982-26-000091_393",
+    "ticker": "GS"
+  },
+  {
+    "question": "What regulatory obligations must entities follow when dealing with various types of derivative instruments like interest rate or credit default swaps?",
+    "chunk_id": "GS_0000886982-26-000091_142",
+    "ticker": "GS"
+  },
+  {
+    "question": "What are the specific stress testing and capital planning requirements for Goldman Sachs' international subsidiaries like GSBE and GSI?",
+    "chunk_id": "GS_0000886982-26-000091_93",
+    "ticker": "GS"
+  },
+  {
+    "question": "What documentation does the company provide regarding life insurance policies for its managing directors?",
+    "chunk_id": "GS_0000886982-26-000091_1354",
+    "ticker": "GS"
+  },
+  {
+    "question": "What types of financial services and lending activities are included under the 'Other' category for the Global Banking & Markets division?",
+    "chunk_id": "GS_0000886982-26-000091_466",
+    "ticker": "GS"
+  },
+  {
+    "question": "What were the risk-based capital ratios for Goldman Sachs International at the end of 2025?",
+    "chunk_id": "GS_0000886982-26-000091_592",
+    "ticker": "GS"
+  },
+  {
+    "question": "What are the upcoming changes to European anti-money laundering regulations and how will they impact the company's compliance obligations?",
+    "chunk_id": "GS_0000886982-26-000091_163",
+    "ticker": "GS"
+  },
+  {
+    "question": "How does the company use its backlog data to gauge future business performance and what are the potential risks associated with these projections?",
+    "chunk_id": "GS_0000886982-26-000091_476",
+    "ticker": "GS"
+  },
+  {
+    "question": "What are the potential negative impacts on the company if it faces significant regulatory investigations or legal penalties?",
+    "chunk_id": "GS_0000886982-26-000091_206",
+    "ticker": "GS"
+  },
+  {
+    "question": "What framework did the company use to evaluate the effectiveness of its internal financial reporting controls at the end of 2025?",
+    "chunk_id": "GS_0000886982-26-000091_778",
+    "ticker": "GS"
+  },
+  {
+    "question": "How does the company distinguish between the Value-at-Risk metrics applied for internal risk oversight versus those required for regulatory capital reporting?",
+    "chunk_id": "GS_0000886982-26-000091_569",
+    "ticker": "GS"
+  },
+  {
+    "question": "What was the total value of the firm's repurchase agreements and long-term unsecured borrowings as of the end of 2024?",
+    "chunk_id": "GS_0000886982-26-000091_928",
+    "ticker": "GS"
+  },
+  {
+    "question": "What was the average liquidity discount applied to restricted stock units to account for transfer limitations over the past three years?",
+    "chunk_id": "GS_0000886982-26-000091_1301",
+    "ticker": "GS"
+  },
+  {
+    "question": "How does Goldman Sachs protect its digital infrastructure and client information from potential cyber threats?",
+    "chunk_id": "GS_0000886982-26-000091_747",
+    "ticker": "GS"
+  },
+  {
+    "question": "How would the company's resolution strategy impact the potential financial outcomes for its investors if the firm were to fail?",
+    "chunk_id": "GS_0000886982-26-000091_333",
+    "ticker": "GS"
+  },
+  {
+    "question": "How does Goldman Sachs ensure the accuracy and oversight of the quantitative models used for financial valuation and risk assessment?",
+    "chunk_id": "GS_0000886982-26-000091_758",
+    "ticker": "GS"
+  },
+  {
+    "question": "What was the breakdown of credit quality for the company's lending commitments and loans as of the end of 2024?",
+    "chunk_id": "GS_0000886982-26-000091_727",
+    "ticker": "GS"
+  },
+  {
+    "question": "How did the overall economic climate and financial market performance evolve throughout 2025 compared to the previous year?",
+    "chunk_id": "GS_0000886982-26-000091_429",
+    "ticker": "GS"
+  },
+  {
+    "question": "What criteria does Goldman Sachs use to decide the necessary level and structure of its capital reserves?",
+    "chunk_id": "GS_0000886982-26-000091_546",
+    "ticker": "GS"
+  },
+  {
+    "question": "What was the total change in interest income and interest expense broken down by U.S. and non-U.S. categories?",
+    "chunk_id": "GS_0000886982-26-000091_1327",
+    "ticker": "GS"
+  },
+  {
+    "question": "What are the collateral requirements for GS Bank USA and GSBE when engaging in non-cleared derivative transactions?",
+    "chunk_id": "GS_0000886982-26-000091_146",
+    "ticker": "GS"
+  },
+  {
+    "question": "What legal challenges is the firm currently facing regarding its involvement in the public offerings of SVB Financial Group?",
+    "chunk_id": "GS_0000886982-26-000091_1247",
+    "ticker": "GS"
+  },
+  {
+    "question": "What are the primary ways the Parent Company obtains its funding and revenue?",
+    "chunk_id": "JPM_0001628280-26-008131_1300",
+    "ticker": "JPM"
+  },
+  {
+    "question": "What was the average total value of loans held by the bank across its various client coverage segments?",
+    "chunk_id": "JPM_0001628280-26-008131_350",
+    "ticker": "JPM"
+  },
+  {
+    "question": "Why do revolving loans that have transitioned into term loans typically experience higher rates of delinquency?",
+    "chunk_id": "JPM_0001628280-26-008131_1093",
+    "ticker": "JPM"
+  },
+  {
+    "question": "What factors contributed to the changes in the company's short-term borrowing levels and commercial paper usage throughout 2025?",
+    "chunk_id": "JPM_0001628280-26-008131_501",
+    "ticker": "JPM"
+  },
+  {
+    "question": "What was the total amount set aside for potential credit losses across all lending categories at the end of 2025?",
+    "chunk_id": "JPM_0001628280-26-008131_334",
+    "ticker": "JPM"
+  },
+  {
+    "question": "How does JPMorgan Chase manage the financial dangers associated with its derivative trading activities?",
+    "chunk_id": "JPM_0001628280-26-008131_946",
+    "ticker": "JPM"
+  },
+  {
+    "question": "How does the company determine whether to consolidate an entity versus using the equity method for its investments?",
+    "chunk_id": "JPM_0001628280-26-008131_777",
+    "ticker": "JPM"
+  },
+  {
+    "question": "How does the company manage the risk associated with its retained loan portfolio?",
+    "chunk_id": "JPM_0001628280-26-008131_552",
+    "ticker": "JPM"
+  },
+  {
+    "question": "What were the company's capital adequacy ratios and total risk-weighted assets for the most recent reporting period?",
+    "chunk_id": "JPM_0001628280-26-008131_1310",
+    "ticker": "JPM"
+  },
+  {
+    "question": "What are the limitations of the pro forma financial data provided regarding the company's recent acquisition?",
+    "chunk_id": "JPM_0001628280-26-008131_1409",
+    "ticker": "JPM"
+  },
+  {
+    "question": "How much did the average duration of loan term extensions change for JPMorgan Chase between 2024 and 2025?",
+    "chunk_id": "JPM_0001628280-26-008131_1140",
+    "ticker": "JPM"
+  },
+  {
+    "question": "When did the transition period for CECL capital requirements officially conclude?",
+    "chunk_id": "JPM_0001628280-26-008131_449",
+    "ticker": "JPM"
+  },
+  {
+    "question": "What was the total fair value of the net assets obtained by JPMorganChase during the acquisition?",
+    "chunk_id": "JPM_0001628280-26-008131_1402",
+    "ticker": "JPM"
+  },
+  {
+    "question": "How does the company ensure that its internal business units are effectively identifying and managing their operational risks?",
+    "chunk_id": "JPM_0001628280-26-008131_664",
+    "ticker": "JPM"
+  },
+  {
+    "question": "What are the primary risks JPMorgan Chase faces regarding collateral management during times of financial market instability?",
+    "chunk_id": "JPM_0001628280-26-008131_114",
+    "ticker": "JPM"
+  },
+  {
+    "question": "What are the specific capital thresholds that J.P. Morgan Securities must maintain to comply with SEC and CFTC reporting obligations?",
+    "chunk_id": "JPM_0001628280-26-008131_469",
+    "ticker": "JPM"
+  },
+  {
+    "question": "How does the regulatory environment impact the operational structure and business practices of JPMorganChase?",
+    "chunk_id": "JPM_0001628280-26-008131_65",
+    "ticker": "JPM"
+  },
+  {
+    "question": "How would a ten percent drop in the market value of the company's real estate-related loans and private equity investments affect their financial position?",
+    "chunk_id": "JPM_0001628280-26-008131_646",
+    "ticker": "JPM"
+  },
+  {
+    "question": "What is the total value of the company's trading assets, including both debt instruments and derivative receivables?",
+    "chunk_id": "JPM_0001628280-26-008131_821",
+    "ticker": "JPM"
+  },
+  {
+    "question": "How does the company define investment-grade status when assessing the risk of its wholesale credit holdings?",
+    "chunk_id": "JPM_0001628280-26-008131_548",
+    "ticker": "JPM"
+  },
+  {
+    "question": "What are the potential negative consequences for JPMorgan Chase if it encounters a major operational failure or system disruption?",
+    "chunk_id": "JPM_0001628280-26-008131_135",
+    "ticker": "JPM"
+  },
+  {
+    "question": "What modifications has the Federal Reserve suggested regarding how the GSIB surcharge is determined?",
+    "chunk_id": "JPM_0001628280-26-008131_432",
+    "ticker": "JPM"
+  },
+  {
+    "question": "What was the total amount of lending-related commitments held by the firm, broken down by their specific impairment methodologies?",
+    "chunk_id": "JPM_0001628280-26-008131_1161",
+    "ticker": "JPM"
+  },
+  {
+    "question": "Who are the authorized individuals that signed the 2025 annual report for JPMorgan Chase & Co.?",
+    "chunk_id": "JPM_0001628280-26-008131_1470",
+    "ticker": "JPM"
+  },
+  {
+    "question": "How does the company evaluate market risks for financial instruments that fall outside of its standard VaR or earnings-at-risk calculations?",
+    "chunk_id": "JPM_0001628280-26-008131_644",
+    "ticker": "JPM"
+  },
+  {
+    "question": "What are the potential risks to the company's reputation and user interaction caused by the misuse of its digital platforms?",
+    "chunk_id": "MSFT_0000950170-25-100235_108",
+    "ticker": "MSFT"
+  },
+  {
+    "question": "How long is the typical vesting schedule for Microsoft's employee stock awards?",
+    "chunk_id": "MSFT_0000950170-25-100235_335",
+    "ticker": "MSFT"
+  },
+  {
+    "question": "How does the company handle adjustments to revenue estimates when customers are granted rights of return or other incentives?",
+    "chunk_id": "MSFT_0000950170-25-100235_255",
+    "ticker": "MSFT"
+  },
+  {
+    "question": "What factors contributed to the company's effective tax rate being lower than the standard U.S. federal rate during the 2025 fiscal year?",
+    "chunk_id": "MSFT_0000950170-25-100235_202",
+    "ticker": "MSFT"
+  },
+  {
+    "question": "How much funding is currently available for the company's active stock buyback initiative as of the end of the 2025 fiscal year?",
+    "chunk_id": "MSFT_0000950170-25-100235_329",
+    "ticker": "MSFT"
+  },
+  {
+    "question": "How does the company estimate the potential financial impact of market fluctuations on its investment portfolio and earnings?",
+    "chunk_id": "MSFT_0000950170-25-100235_234",
+    "ticker": "MSFT"
+  },
+  {
+    "question": "What are the potential financial risks associated with the company transitioning toward a vertically-integrated business strategy?",
+    "chunk_id": "MSFT_0000950170-25-100235_73",
+    "ticker": "MSFT"
+  },
+  {
+    "question": "What are the potential negative consequences for the company if it fails to comply with the specific regulations or terms associated with its public sector contracts?",
+    "chunk_id": "MSFT_0000950170-25-100235_135",
+    "ticker": "MSFT"
+  },
+  {
+    "question": "Why is it critical for the company to consistently develop new offerings and adapt to technological shifts?",
+    "chunk_id": "MSFT_0000950170-25-100235_71",
+    "ticker": "MSFT"
+  },
+  {
+    "question": "How does the company handle potential violations of international anti-bribery and corruption regulations?",
+    "chunk_id": "MSFT_0000950170-25-100235_126",
+    "ticker": "MSFT"
+  },
+  {
+    "question": "What are the details regarding the supplemental indentures Microsoft established for its various long-term debt notes between 2017 and 2021?",
+    "chunk_id": "MSFT_0000950170-25-100235_381",
+    "ticker": "MSFT"
+  },
+  {
+    "question": "What is the total fair value breakdown for the company's various debt and equity investment categories?",
+    "chunk_id": "MSFT_0000950170-25-100235_287",
+    "ticker": "MSFT"
+  },
+  {
+    "question": "How does the company determine the value of its operating lease liabilities and right-of-use assets when an implicit interest rate is unavailable?",
+    "chunk_id": "MSFT_0000950170-25-100235_275",
+    "ticker": "MSFT"
+  },
+  {
+    "question": "What are the potential financial and operational risks the company faces regarding ongoing legal disputes and government-related business activities?",
+    "chunk_id": "MSFT_0000950170-25-100235_134",
+    "ticker": "MSFT"
+  },
+  {
+    "question": "Which financial institutions serve as trustees for Microsoft's and Activision Blizzard's debt indentures?",
+    "chunk_id": "MSFT_0000950170-25-100235_382",
+    "ticker": "MSFT"
+  },
+  {
+    "question": "What was the total net value of the company's property and equipment as of the end of the 2025 fiscal year?",
+    "chunk_id": "MSFT_0000950170-25-100235_299",
+    "ticker": "MSFT"
+  },
+  {
+    "question": "What are some examples of financial areas where the company must make significant judgments due to estimation uncertainty?",
+    "chunk_id": "MSFT_0000950170-25-100235_219",
+    "ticker": "MSFT"
+  },
+  {
+    "question": "What were the net gains or losses recorded for the company's derivative instruments across different hedging categories for the fiscal year ending in 2025?",
+    "chunk_id": "MSFT_0000950170-25-100235_298",
+    "ticker": "MSFT"
+  },
+  {
+    "question": "What are the primary tax implications for Microsoft following the passage of the One Big Beautiful Bill Act?",
+    "chunk_id": "MSFT_0000950170-25-100235_204",
+    "ticker": "MSFT"
+  },
+  {
+    "question": "How does Microsoft categorize its commercial business operations and track their financial performance?",
+    "chunk_id": "MSFT_0000950170-25-100235_185",
+    "ticker": "MSFT"
+  },
+  {
+    "question": "What are the potential business consequences if the artificial intelligence tools integrated into company services malfunction or are misused?",
+    "chunk_id": "MSFT_0000950170-25-100235_112",
+    "ticker": "MSFT"
+  },
+  {
+    "question": "What are some of the primary challenges Microsoft faces regarding its market position and the competitive landscape of the tech industry?",
+    "chunk_id": "MSFT_0000950170-25-100235_70",
+    "ticker": "MSFT"
+  },
+  {
+    "question": "How does the company account for the expenses associated with acquiring new customer contracts?",
+    "chunk_id": "MSFT_0000950170-25-100235_260",
+    "ticker": "MSFT"
+  },
+  {
+    "question": "How does the company decide if a software license and cloud service should be treated as one or two separate items for revenue reporting?",
+    "chunk_id": "MSFT_0000950170-25-100235_252",
+    "ticker": "MSFT"
+  },
+  {
+    "question": "Why does the company prefer to build its own technology and software solutions rather than outsourcing them?",
+    "chunk_id": "MSFT_0000950170-25-100235_46",
+    "ticker": "MSFT"
+  },
+  {
+    "question": "How does the company expect ongoing legal proceedings to impact its overall financial health and stability?",
+    "chunk_id": "NVDA_0001045810-26-000021_386",
+    "ticker": "NVDA"
+  },
+  {
+    "question": "What are the primary industry sectors that NVIDIA targets with its specialized computing and artificial intelligence technology?",
+    "chunk_id": "NVDA_0001045810-26-000021_24",
+    "ticker": "NVDA"
+  },
+  {
+    "question": "How did the new export restrictions on H20 chips impact the company's financial performance in early 2026?",
+    "chunk_id": "NVDA_0001045810-26-000021_56",
+    "ticker": "NVDA"
+  },
+  {
+    "question": "What are some of the primary legal and financial risks that could negatively influence the company's performance?",
+    "chunk_id": "NVDA_0001045810-26-000021_78",
+    "ticker": "NVDA"
+  },
+  {
+    "question": "What is the company's policy for accounting for potential financial losses resulting from ongoing legal disputes or regulatory investigations?",
+    "chunk_id": "NVDA_0001045810-26-000021_321",
+    "ticker": "NVDA"
+  },
+  {
+    "question": "What are the potential financial risks associated with the company's investment in new product development and third-party technology licensing?",
+    "chunk_id": "NVDA_0001045810-26-000021_81",
+    "ticker": "NVDA"
+  },
+  {
+    "question": "How has the company's total revenue been distributed across different global regions over the past three fiscal years?",
+    "chunk_id": "NVDA_0001045810-26-000021_405",
+    "ticker": "NVDA"
+  },
+  {
+    "question": "How does the company determine the fair value and forfeiture rates for its various employee stock-based compensation awards?",
+    "chunk_id": "NVDA_0001045810-26-000021_348",
+    "ticker": "NVDA"
+  },
+  {
+    "question": "What specific corporate governance policies or external agreements might hinder a potential acquisition or takeover of NVIDIA?",
+    "chunk_id": "NVDA_0001045810-26-000021_216",
+    "ticker": "NVDA"
+  },
+  {
+    "question": "What was the total value of the company's current liabilities at the end of the most recent reporting period?",
+    "chunk_id": "NVDA_0001045810-26-000021_305",
+    "ticker": "NVDA"
+  },
+  {
+    "question": "How are NVIDIA's professional-grade graphics cards being utilized to support the growing demand for artificial intelligence in creative and technical industries?",
+    "chunk_id": "NVDA_0001045810-26-000021_32",
+    "ticker": "NVDA"
+  },
+  {
+    "question": "What are the potential business consequences if the company fails to adequately protect its proprietary technology and confidential data?",
+    "chunk_id": "NVDA_0001045810-26-000021_197",
+    "ticker": "NVDA"
+  },
+  {
+    "question": "What are the potential business consequences if the company faces allegations of intellectual property infringement?",
+    "chunk_id": "NVDA_0001045810-26-000021_195",
+    "ticker": "NVDA"
+  },
+  {
+    "question": "How did the company's financial performance and specific segment revenues change between fiscal year 2025 and 2026?",
+    "chunk_id": "NVDA_0001045810-26-000021_239",
+    "ticker": "NVDA"
+  },
+  {
+    "question": "How much money did the company allocate toward capital investments during the 2025 and 2026 fiscal years?",
+    "chunk_id": "NVDA_0001045810-26-000021_270",
+    "ticker": "NVDA"
+  },
+  {
+    "question": "What are the primary geographic risks that could disrupt the company's supply chain and operational stability?",
+    "chunk_id": "NVDA_0001045810-26-000021_128",
+    "ticker": "NVDA"
+  },
+  {
+    "question": "How many shares is the company's CFO planning to sell according to their latest trading plan?",
+    "chunk_id": "NVDA_0001045810-26-000021_283",
+    "ticker": "NVDA"
+  },
+  {
+    "question": "What was the total count of NVIDIA's common shares in circulation as of late February 2026?",
+    "chunk_id": "NVDA_0001045810-26-000021_5",
+    "ticker": "NVDA"
+  },
+  {
+    "question": "How does the company manage the financial risks associated with fluctuations in foreign exchange rates regarding its operational costs?",
+    "chunk_id": "NVDA_0001045810-26-000021_369",
+    "ticker": "NVDA"
+  },
+  {
+    "question": "How have current international trade regulations and export restrictions impacted the company's ability to sell data center hardware in China?",
+    "chunk_id": "NVDA_0001045810-26-000021_58",
+    "ticker": "NVDA"
+  },
+  {
+    "question": "What types of equity-based compensation does NVIDIA offer to its workforce under the 2007 incentive program?",
+    "chunk_id": "NVDA_0001045810-26-000021_349",
+    "ticker": "NVDA"
+  },
+  {
+    "question": "How would a ten percent drop in the value of the company's public stock holdings affect its overall financial position?",
+    "chunk_id": "NVDA_0001045810-26-000021_274",
+    "ticker": "NVDA"
+  },
+  {
+    "question": "What are the specific allegations made against NVIDIA's leadership in the Horanic v. Huang derivative lawsuit?",
+    "chunk_id": "NVDA_0001045810-26-000021_384",
+    "ticker": "NVDA"
+  },
+  {
+    "question": "What are the potential negative impacts of climate change and sustainability expectations on the company's financial performance and public image?",
+    "chunk_id": "NVDA_0001045810-26-000021_136",
+    "ticker": "NVDA"
+  },
+  {
+    "question": "What is the total value of the company's undistributed foreign earnings that are slated for long-term reinvestment?",
+    "chunk_id": "NVDA_0001045810-26-000021_393",
+    "ticker": "NVDA"
+  }
+]

@@ -1,0 +1,197 @@
+{
+  "annotations": { "list": [] },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": null,
+  "links": [],
+  "panels": [
+    {
+      "id": 1,
+      "type": "timeseries",
+      "title": "Conversations over time",
+      "datasource": { "type": "postgres", "uid": "postgres_ds" },
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 0 },
+      "targets": [
+        {
+          "rawSql": "SELECT date_trunc('hour', created_at) AS time, count(*) AS conversations FROM monitoring.conversations WHERE $__timeFilter(created_at) GROUP BY 1 ORDER BY 1",
+          "format": "time_series",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": { "defaults": {}, "overrides": [] },
+      "options": {}
+    },
+    {
+      "id": 2,
+      "type": "timeseries",
+      "title": "Average latency (ms)",
+      "datasource": { "type": "postgres", "uid": "postgres_ds" },
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 0 },
+      "targets": [
+        {
+          "rawSql": "SELECT date_trunc('hour', created_at) AS time, avg(latency_ms) AS avg_latency_ms FROM monitoring.conversations WHERE $__timeFilter(created_at) GROUP BY 1 ORDER BY 1",
+          "format": "time_series",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": { "defaults": { "unit": "ms" }, "overrides": [] },
+      "options": {}
+    },
+    {
+      "id": 3,
+      "type": "piechart",
+      "title": "Feedback: thumbs up vs down",
+      "datasource": { "type": "postgres", "uid": "postgres_ds" },
+      "gridPos": { "h": 8, "w": 8, "x": 0, "y": 8 },
+      "targets": [
+        {
+          "rawSql": "SELECT CASE WHEN is_positive THEN 'Thumbs up' ELSE 'Thumbs down' END AS metric, count(*) AS value FROM monitoring.feedback WHERE $__timeFilter(created_at) GROUP BY 1",
+          "format": "table",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": { "defaults": {}, "overrides": [] },
+      "options": { "legend": { "displayMode": "list", "placement": "bottom" } }
+    },
+    {
+      "id": 4,
+      "type": "piechart",
+      "title": "Retrieval method usage",
+      "datasource": { "type": "postgres", "uid": "postgres_ds" },
+      "gridPos": { "h": 8, "w": 8, "x": 8, "y": 8 },
+      "targets": [
+        {
+          "rawSql": "SELECT method AS metric, count(*) AS value FROM monitoring.conversations WHERE $__timeFilter(created_at) GROUP BY 1",
+          "format": "table",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": { "defaults": {}, "overrides": [] },
+      "options": { "legend": { "displayMode": "list", "placement": "bottom" } }
+    },
+    {
+      "id": 5,
+      "type": "stat",
+      "title": "Reranking usage rate",
+      "datasource": { "type": "postgres", "uid": "postgres_ds" },
+      "gridPos": { "h": 4, "w": 4, "x": 16, "y": 8 },
+      "targets": [
+        {
+          "rawSql": "SELECT round(100.0 * sum(CASE WHEN use_rerank THEN 1 ELSE 0 END) / nullif(count(*), 0), 1) AS rerank_pct FROM monitoring.conversations WHERE $__timeFilter(created_at)",
+          "format": "table",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": { "defaults": { "unit": "percent", "max": 100, "min": 0 }, "overrides": [] },
+      "options": {}
+    },
+    {
+      "id": 6,
+      "type": "stat",
+      "title": "Query-rewrite usage rate",
+      "datasource": { "type": "postgres", "uid": "postgres_ds" },
+      "gridPos": { "h": 4, "w": 4, "x": 20, "y": 8 },
+      "targets": [
+        {
+          "rawSql": "SELECT round(100.0 * sum(CASE WHEN use_query_rewrite THEN 1 ELSE 0 END) / nullif(count(*), 0), 1) AS rewrite_pct FROM monitoring.conversations WHERE $__timeFilter(created_at)",
+          "format": "table",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": { "defaults": { "unit": "percent", "max": 100, "min": 0 }, "overrides": [] },
+      "options": {}
+    },
+    {
+      "id": 8,
+      "type": "stat",
+      "title": "Average faithfulness (when scored)",
+      "datasource": { "type": "postgres", "uid": "postgres_ds" },
+      "gridPos": { "h": 4, "w": 4, "x": 16, "y": 12 },
+      "targets": [
+        {
+          "rawSql": "SELECT round(avg(judge_faithfulness)::numeric, 2) AS avg_faithfulness FROM monitoring.conversations WHERE judge_faithfulness IS NOT NULL AND $__timeFilter(created_at)",
+          "format": "table",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": { "defaults": { "unit": "none", "max": 1, "min": 0 }, "overrides": [] },
+      "options": {}
+    },
+    {
+      "id": 9,
+      "type": "stat",
+      "title": "Average context precision (when scored)",
+      "datasource": { "type": "postgres", "uid": "postgres_ds" },
+      "gridPos": { "h": 4, "w": 4, "x": 20, "y": 12 },
+      "targets": [
+        {
+          "rawSql": "SELECT round(avg(judge_context_precision)::numeric, 2) AS avg_context_precision FROM monitoring.conversations WHERE judge_context_precision IS NOT NULL AND $__timeFilter(created_at)",
+          "format": "table",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": { "defaults": { "unit": "none", "max": 1, "min": 0 }, "overrides": [] },
+      "options": {}
+    },
+    {
+      "id": 10,
+      "type": "piechart",
+      "title": "Relevance distribution (when scored)",
+      "datasource": { "type": "postgres", "uid": "postgres_ds" },
+      "gridPos": { "h": 8, "w": 8, "x": 16, "y": 16 },
+      "targets": [
+        {
+          "rawSql": "SELECT judge_relevance AS metric, count(*) AS value FROM monitoring.conversations WHERE judge_relevance IS NOT NULL AND $__timeFilter(created_at) GROUP BY 1",
+          "format": "table",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": { "defaults": {}, "overrides": [] },
+      "options": { "legend": { "displayMode": "list", "placement": "bottom" } }
+    },
+    {
+      "id": 7,
+      "type": "table",
+      "title": "Recent questions",
+      "datasource": { "type": "postgres", "uid": "postgres_ds" },
+      "gridPos": { "h": 8, "w": 24, "x": 0, "y": 24 },
+      "targets": [
+        {
+          "rawSql": "SELECT created_at AS time, question, method, use_rerank, use_query_rewrite, latency_ms, judge_faithfulness, judge_context_precision, judge_relevance FROM monitoring.conversations ORDER BY created_at DESC LIMIT 20",
+          "format": "table",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": { "defaults": {}, "overrides": [] },
+      "options": {}
+    },
+    {
+      "id": 11,
+      "type": "table",
+      "title": "Recent feedback comments",
+      "datasource": { "type": "postgres", "uid": "postgres_ds" },
+      "gridPos": { "h": 8, "w": 24, "x": 0, "y": 32 },
+      "targets": [
+        {
+          "rawSql": "SELECT f.created_at AS time, c.question, f.is_positive, f.comment FROM monitoring.feedback f JOIN monitoring.conversations c ON c.id = f.conversation_id WHERE f.comment IS NOT NULL AND f.comment <> '' ORDER BY f.created_at DESC LIMIT 20",
+          "format": "table",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": { "defaults": {}, "overrides": [] },
+      "options": {}
+    }
+  ],
+  "refresh": "30s",
+  "schemaVersion": 39,
+  "tags": ["sec-rag"],
+  "templating": { "list": [] },
+  "time": { "from": "now-7d", "to": "now" },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "SEC RAG Monitoring",
+  "uid": "sec-rag-monitoring",
+  "version": 1,
+  "weekStart": ""
+}

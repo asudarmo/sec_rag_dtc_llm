@@ -1,0 +1,42 @@
+{
+  "k": 5,
+  "results": [
+    {
+      "config": "dense",
+      "hit_rate": 0.5267,
+      "mrr": 0.3521,
+      "n_questions": 150
+    },
+    {
+      "config": "dense+rerank",
+      "hit_rate": 0.62,
+      "mrr": 0.4819,
+      "n_questions": 150
+    },
+    {
+      "config": "sparse",
+      "hit_rate": 0.3467,
+      "mrr": 0.2296,
+      "n_questions": 150
+    },
+    {
+      "config": "sparse+rerank",
+      "hit_rate": 0.4533,
+      "mrr": 0.3593,
+      "n_questions": 150
+    },
+    {
+      "config": "hybrid",
+      "hit_rate": 0.5133,
+      "mrr": 0.3356,
+      "n_questions": 150
+    },
+    {
+      "config": "hybrid+rerank",
+      "hit_rate": 0.6133,
+      "mrr": 0.4574,
+      "n_questions": 150
+    }
+  ],
+  "best_config": "dense+rerank"
+}
