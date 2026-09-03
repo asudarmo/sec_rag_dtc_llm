@@ -133,11 +133,38 @@ Query rewriting genuinely improves comparison-question quality regardless of bas
 
 **A rate-limit lesson worth knowing if you re-run these**: the Gemini free tier's actual binding constraint is **15 requests/minute** for `gemini-3.1-flash-lite`, not the 500/day figure — running two Gemini-calling eval scripts concurrently exceeded it and crashed one outright. Run these one at a time, and expect them to be slower and less predictably paced than `n_calls × 4s` suggests (the SDK retries transient throttling internally, silently, without it surfacing as an error).
 
+## Agentic RAG (bonus)
+
+Alongside the fixed retrieve-then-generate pipeline above, `rag/agent.py` implements an **agentic RAG** mode: instead of a fixed sequence of retrieval steps, an LLM-driven loop decides for itself when and how to search, using a single `search_filings` tool (Gemini function-calling, matching the DTC course's own Module 1 agentic-RAG pattern — `01-agentic-rag`). It can search once per company or sector when comparing, or search again with different wording if a result isn't useful, before producing a final answer. The Streamlit sidebar's **Mode** control has three options: **Traditional pipeline**, **Agentic RAG** (only exposes a "max searches" safety-cap slider, since the model picks its own queries and sector/ticker scoping), and **Compare both** — runs both on the same question and shows them side by side in two columns, each with its own sources and 👍/👎 feedback, with a loading indicator per side so you can see the (faster) traditional answer land while agentic is still searching.
+
+```bash
+uv run python -m rag.agent "Compare the main AI-related risk factors between tech and banking companies"
+```
+
+**Why one tool, not several**: this domain has exactly one kind of action (retrieve passages, optionally scoped to a sector or company) — Gemini already knows the 6-ticker/2-sector mapping from training, so a second tool (e.g. a ticker lookup) would add complexity without adding real capability. This mirrors the course's own single-tool example.
+
+**Traditional vs. agentic, compared** (`eval/agentic_eval.py` — same 15 comparison questions and same judge as the LLM-judge evaluation above, comparing against `dense+rerank+rewrite`, the best *fixed* config, not a weaker baseline):
+
+| config | faithfulness | context_precision | % relevant | latency (s) | avg Gemini calls |
+|---|---|---|---|---|---|
+| traditional (dense+rerank+rewrite) | 1.000 | 0.904 | 100% | 5.35 | 2.00 |
+| **agentic** | 1.000 | **0.985** | 100% | 17.61 | 2.07 |
+
+Both are perfectly faithful and fully relevant on this question set. Agentic RAG scores a bit higher on context precision (its own targeted per-company/sector searches avoid a few off-topic passages the fixed pipeline occasionally pulls in), but at roughly **3.3x the latency** — every tool call is a full retrieval round-trip plus an extra Gemini round-trip. Interestingly, the agent's call count came in *lower* than expected going in (~2 total Gemini calls/question, not ~4): on every comparison question, it issued both `search_filings` calls together in a single model turn, converging on the same "one search per side" strategy the fixed pipeline's query rewriting was hand-built to encode — without being told that rule explicitly.
+
+**Take:** agentic RAG isn't a strict upgrade here — a modest precision gain for a real latency cost, on a small fixed-domain corpus where the fixed pipeline's own query-rewrite step already handles comparison questions well. It's a genuinely different architecture, and the comparison is the interesting part: a domain-appropriate fixed pipeline can match a general-purpose agent loop when the domain's decomposition rule is simple and already known.
+
+```bash
+uv run python -m eval.agentic_eval   # ~30 answer+judge pairs (15 questions x 2 configs); resumable, checkpoints after every item
+```
+
+**A citation-numbering bug, live-reported and fixed**: on multi-search comparison questions, the agent's citations for the *second* search (e.g. the banking side of a sector comparison) were off by exactly the size of the first search's result set — banking claims cited `[1]`-`[5]` when the Sources panel actually showed banking passages at `[6]`-`[10]`. Each tool call had been numbering its own passages `[1]`-`[N]` independently; the final Sources display numbers all passages globally, in first-seen order across every search. Fixed by giving `rag/agent.py` a citation-number map shared across all tool calls in one run, so a passage gets the same `[N]` whether the model saw it in the first search or the third — verified against the exact reported query (banking claims now correctly cite `[6]`-`[10]`) and covered by a new regression test.
+
 ## Monitoring
 
 Every question asked in `app.py` (the Streamlit UI) is logged to Postgres — question, answer, retrieval config used (method/rerank/rewrite/filter), and latency — plus any 👍/👎 feedback (with an optional free-text comment) and any LLM-judge scores, all linked back to that conversation. `monitoring/db.py` owns the schema (`monitoring.conversations`, `monitoring.feedback` — a separate schema from dlt's `raw` ingestion staging tables in the same shared Postgres container).
 
-A Grafana dashboard (`monitoring/grafana/`, auto-provisioned — no manual setup needed) reads straight from that schema with **11 panels**: conversations over time, average latency over time, feedback thumbs up/down, retrieval method usage, reranking usage rate, query-rewrite usage rate, average faithfulness, average context precision, relevance distribution, a recent-questions table, and a recent-feedback-comments table.
+A Grafana dashboard (`monitoring/grafana/`, auto-provisioned — no manual setup needed) reads straight from that schema with **13 panels**: conversations over time, average latency over time, feedback thumbs up/down, retrieval method usage, reranking usage rate, query-rewrite usage rate, average faithfulness, average context precision, relevance distribution, a recent-questions table, a recent-feedback-comments table, traditional-vs-agentic-RAG usage, and average tool calls per agentic conversation.
 
 Every answer is shown alongside a "Sources (N passages retrieved)" section — one expander per retrieved passage (ticker, sector, filing date, full text) — so you can check the answer is actually grounded in what was retrieved, not just take it on faith. Feedback is a colored confirmation box after clicking 👍/👎 (with an optional comment box bundled into the same submission), not just a caption.
 
@@ -178,8 +205,8 @@ App: http://localhost:8501 · Grafana: http://localhost:3000 (anonymous viewer a
 ```
 sec_rag_dtc_llm/
 ├── ingestion/       # download, chunk, embed — plus the dlt-orchestrated pipeline
-├── rag/             # retrieval (dense/sparse/hybrid + rerank/rewrite/fields) + generation
-├── eval/            # retrieval & LLM evaluation
+├── rag/             # retrieval (dense/sparse/hybrid + rerank/rewrite/fields) + generation + agentic RAG (agent.py)
+├── eval/            # retrieval & LLM evaluation, incl. traditional-vs-agentic comparison
 ├── monitoring/      # Postgres schema/logging + Grafana provisioning & dashboards
 ├── data/processed/  # chunks.json (committed seed data)
 ├── chroma_db/       # prebuilt vector store (committed seed data)

@@ -63,6 +63,8 @@ def init_db() -> None:
                 judge_faithfulness REAL,
                 judge_context_precision REAL,
                 judge_relevance TEXT,
+                is_agentic BOOLEAN NOT NULL DEFAULT FALSE,
+                n_tool_calls INTEGER,
                 created_at TIMESTAMPTZ NOT NULL DEFAULT now()
             )
         """)
@@ -75,6 +77,15 @@ def init_db() -> None:
         cur.execute(f"ALTER TABLE {SCHEMA}.conversations ADD COLUMN IF NOT EXISTS judge_faithfulness REAL")
         cur.execute(f"ALTER TABLE {SCHEMA}.conversations ADD COLUMN IF NOT EXISTS judge_context_precision REAL")
         cur.execute(f"ALTER TABLE {SCHEMA}.conversations ADD COLUMN IF NOT EXISTS judge_relevance TEXT")
+        # is_agentic/n_tool_calls: traditional-pipeline vs agentic-RAG mode (rag/agent.py).
+        # For an agentic conversation, method/use_rerank still describe what the
+        # search_filings tool used internally (dense+rerank — see rag/agent.py's
+        # SEARCH_METHOD/SEARCH_USE_RERANK), so the "retrieval method usage" panel
+        # stays accurate; use_query_rewrite stays False since the agent's own
+        # adaptive decomposition is a different mechanism from rag/query_rewrite.py,
+        # tracked here via n_tool_calls instead.
+        cur.execute(f"ALTER TABLE {SCHEMA}.conversations ADD COLUMN IF NOT EXISTS is_agentic BOOLEAN NOT NULL DEFAULT FALSE")
+        cur.execute(f"ALTER TABLE {SCHEMA}.conversations ADD COLUMN IF NOT EXISTS n_tool_calls INTEGER")
         cur.execute(f"""
             CREATE TABLE IF NOT EXISTS {SCHEMA}.feedback (
                 id SERIAL PRIMARY KEY,
@@ -99,24 +110,29 @@ def log_conversation(
     judge_faithfulness: float | None = None,
     judge_context_precision: float | None = None,
     judge_relevance: str | None = None,
+    is_agentic: bool = False,
+    n_tool_calls: int | None = None,
 ) -> int:
     """Insert a conversation row, return its id (used to link feedback to it later).
     The judge_* fields are None unless the caller opted into live LLM-as-judge
     scoring (see rag/judge.py, app.py's "Score this answer" toggle) — most
-    conversations won't have them, and that's expected, not an error.
+    conversations won't have them, and that's expected, not an error. is_agentic/
+    n_tool_calls track whether this came from the agentic-RAG mode (rag/agent.py)
+    vs. the traditional pipeline, and how many searches the agent chose to run.
     """
     with get_connection() as conn, conn.cursor() as cur:
         cur.execute(
             f"""
             INSERT INTO {SCHEMA}.conversations
                 (question, answer, method, use_rerank, use_query_rewrite, filter_dict, latency_ms,
-                 judge_faithfulness, judge_context_precision, judge_relevance)
-            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                 judge_faithfulness, judge_context_precision, judge_relevance, is_agentic, n_tool_calls)
+            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
             RETURNING id
             """,
             (question, answer, method, use_rerank, use_query_rewrite,
              json.dumps(filter_dict) if filter_dict else None, latency_ms,
-             judge_faithfulness, judge_context_precision, judge_relevance),
+             judge_faithfulness, judge_context_precision, judge_relevance,
+             is_agentic, n_tool_calls),
         )
         return cur.fetchone()[0]
 

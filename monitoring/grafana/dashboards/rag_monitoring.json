@@ -158,7 +158,7 @@
       "gridPos": { "h": 8, "w": 24, "x": 0, "y": 24 },
       "targets": [
         {
-          "rawSql": "SELECT created_at AS time, question, method, use_rerank, use_query_rewrite, latency_ms, judge_faithfulness, judge_context_precision, judge_relevance FROM monitoring.conversations ORDER BY created_at DESC LIMIT 20",
+          "rawSql": "SELECT created_at AS time, question, method, is_agentic, n_tool_calls, use_rerank, use_query_rewrite, latency_ms, judge_faithfulness, judge_context_precision, judge_relevance FROM monitoring.conversations ORDER BY created_at DESC LIMIT 20",
           "format": "table",
           "refId": "A"
         }
@@ -180,6 +180,38 @@
         }
       ],
       "fieldConfig": { "defaults": {}, "overrides": [] },
+      "options": {}
+    },
+    {
+      "id": 12,
+      "type": "piechart",
+      "title": "Traditional vs Agentic RAG usage",
+      "datasource": { "type": "postgres", "uid": "postgres_ds" },
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 40 },
+      "targets": [
+        {
+          "rawSql": "SELECT CASE WHEN is_agentic THEN 'Agentic RAG' ELSE 'Traditional pipeline' END AS metric, count(*) AS value FROM monitoring.conversations WHERE $__timeFilter(created_at) GROUP BY 1",
+          "format": "table",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": { "defaults": {}, "overrides": [] },
+      "options": { "legend": { "displayMode": "list", "placement": "bottom" } }
+    },
+    {
+      "id": 13,
+      "type": "stat",
+      "title": "Average tool calls per agentic conversation",
+      "datasource": { "type": "postgres", "uid": "postgres_ds" },
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 40 },
+      "targets": [
+        {
+          "rawSql": "SELECT round(avg(n_tool_calls)::numeric, 2) AS avg_tool_calls FROM monitoring.conversations WHERE is_agentic AND $__timeFilter(created_at)",
+          "format": "table",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": { "defaults": { "unit": "none" }, "overrides": [] },
       "options": {}
     }
   ],
