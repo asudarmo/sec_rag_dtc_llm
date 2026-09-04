@@ -24,10 +24,16 @@ Built as a DataTalksClub LLM Zoomcamp capstone project.
 
 ![Grafana dashboard](docs/images/grafana_dashboard.png)
 
+**Live deployment** (GCP free-tier VM): [app](http://35.196.253.183:8501) ·
+[Grafana dashboard](http://35.196.253.183:3000) — no login needed for either. See
+[docs/cloud-deployment.md](docs/cloud-deployment.md) for setup details and a known
+latency trade-off of the free tier (a heavy multi-search question can take a few
+minutes; simple questions are much faster).
+
 ## Quick start
 
 ```bash
-git clone <this-repo>
+git clone https://github.com/asudarmo/sec_rag_dtc_llm.git
 cd sec_rag_dtc_llm
 cp .env.example .env   # fill in GEMINI_API_KEY at minimum
 docker compose up -d --build
@@ -75,7 +81,7 @@ This project targets the [DTC LLM Zoomcamp rubric](https://github.com/DataTalksC
 | Best practice: document re-ranking | [docs/architecture.md](docs/architecture.md) |
 | Best practice: query rewriting | [docs/architecture.md](docs/architecture.md) |
 | Extra: agentic RAG | [docs/agentic-rag.md](docs/agentic-rag.md) |
-| Bonus: cloud deployment | [docs/cloud-deployment.md](docs/cloud-deployment.md) — in progress |
+| Bonus: cloud deployment | [docs/cloud-deployment.md](docs/cloud-deployment.md) — [live app](http://35.196.253.183:8501) |
 
 ## Documentation
 
@@ -85,7 +91,7 @@ This project targets the [DTC LLM Zoomcamp rubric](https://github.com/DataTalksC
 - [Evaluation](docs/evaluation.md) — retrieval evaluation (Hit Rate/MRR) and LLM-judge generation evaluation, with results
 - [Agentic RAG](docs/agentic-rag.md) — LLM-driven tool-calling mode, compared against the fixed pipeline
 - [Monitoring](docs/monitoring.md) — Postgres schema, Grafana dashboard, LLM-as-judge metrics
-- [Cloud deployment](docs/cloud-deployment.md) — GCP free-tier VM setup (in progress)
+- [Cloud deployment](docs/cloud-deployment.md) — GCP free-tier VM setup, deployed and stress-tested
 - [Changelog](CHANGELOG.md) — development history: bugs found and fixed, lessons learned, notable decisions
 
 ## Project structure
