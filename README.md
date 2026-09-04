@@ -70,6 +70,7 @@ This project targets the [DTC LLM Zoomcamp rubric](https://github.com/DataTalksC
 | Best practice: document re-ranking | [docs/architecture.md](docs/architecture.md) |
 | Best practice: query rewriting | [docs/architecture.md](docs/architecture.md) |
 | Extra: agentic RAG | [docs/agentic-rag.md](docs/agentic-rag.md) |
+| Bonus: cloud deployment | [docs/cloud-deployment.md](docs/cloud-deployment.md) — in progress |
 
 ## Documentation
 
@@ -79,6 +80,7 @@ This project targets the [DTC LLM Zoomcamp rubric](https://github.com/DataTalksC
 - [Evaluation](docs/evaluation.md) — retrieval evaluation (Hit Rate/MRR) and LLM-judge generation evaluation, with results
 - [Agentic RAG](docs/agentic-rag.md) — LLM-driven tool-calling mode, compared against the fixed pipeline
 - [Monitoring](docs/monitoring.md) — Postgres schema, Grafana dashboard, LLM-as-judge metrics
+- [Cloud deployment](docs/cloud-deployment.md) — GCP free-tier VM setup (in progress)
 - [Changelog](CHANGELOG.md) — development history: bugs found and fixed, lessons learned, notable decisions
 
 ## Project structure

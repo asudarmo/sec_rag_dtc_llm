@@ -77,6 +77,21 @@ is background for anyone curious about the "why," not required reading.
 
 ## Monitoring & UI
 
+- **Grafana datasource hardcoded the default Postgres password, live-reported and
+  fixed**: `monitoring/grafana/provisioning/datasources/postgres.yml` hardcoded
+  `user: postgres` / `password: postgres` — matching the repo's default `.env`
+  values, so it worked in every local/dev setup, but broke silently (every panel
+  showing "password authentication failed") the moment `POSTGRES_PASSWORD` was
+  changed from the default, e.g. for an internet-facing cloud deployment where
+  reusing the default is a bad idea. The `app` container was unaffected, since
+  `monitoring/db.py` already read credentials from the environment correctly — only
+  Grafana's provisioning file had the value baked in. Fixed by switching the
+  datasource YAML to Grafana's `$__env{VARNAME}` provisioning syntax for
+  `user`/`database`/`password`, and adding `env_file: .env` to the `grafana` service
+  in `docker-compose.yml` (previously missing entirely, so these variables weren't
+  even in Grafana's process environment for `$__env{}` to resolve). Verified via
+  Grafana's `/api/ds/query` endpoint returning real data (not an auth error) both
+  locally and on the cloud-deployed instance after recreating the `grafana` container.
 - **Sources display regression, found while verifying an answer's grounding**:
   `app.py` called the `rag.generate.answer()` convenience wrapper, which retrieves
   and generates internally but only returns the answer string, discarding the

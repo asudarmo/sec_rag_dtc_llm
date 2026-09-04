@@ -6,12 +6,12 @@ datasources:
     type: postgres
     access: proxy
     url: postgres:5432
-    database: sec_rag
-    user: postgres
+    database: $__env{POSTGRES_DB}
+    user: $__env{POSTGRES_USER}
     isDefault: true
     editable: true
     secureJsonData:
-      password: postgres
+      password: $__env{POSTGRES_PASSWORD}
     jsonData:
       sslmode: disable
       postgresVersion: 1500
