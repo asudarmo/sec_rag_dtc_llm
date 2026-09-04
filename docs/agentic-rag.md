@@ -34,6 +34,8 @@ The Streamlit sidebar's **Mode** control has three options:
   per-side loading indicator so you can see the (faster) traditional answer land
   while agentic is still searching
 
+![Compare both mode: traditional and agentic answers side by side](images/streamlit_both_mode.png)
+
 ## Traditional vs. agentic, compared
 
 `eval/agentic_eval.py` compares agentic RAG against the best *fixed* config

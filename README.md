@@ -16,8 +16,13 @@ Built as a DataTalksClub LLM Zoomcamp capstone project.
 
 ## Demo
 
-<!-- TODO: add a screenshot of the Streamlit app (a question + cited answer + sources)
-     and one of the Grafana dashboard, e.g. docs/images/app.png, docs/images/grafana.png -->
+**"Compare both" mode** — traditional and agentic RAG answering the same question side by side:
+
+![Streamlit app: Compare both mode](docs/images/streamlit_both_mode.png)
+
+**Grafana monitoring dashboard**, populated with real usage data:
+
+![Grafana dashboard](docs/images/grafana_dashboard.png)
 
 ## Quick start
 

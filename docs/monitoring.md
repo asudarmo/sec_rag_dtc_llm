@@ -19,6 +19,8 @@ shared Postgres container (see [setup.md](setup.md)).
 Auto-provisioned from `monitoring/grafana/` — no manual setup needed, comes up with
 `docker compose up`. **13 panels**:
 
+![Grafana dashboard](images/grafana_dashboard.png)
+
 - Conversations over time
 - Average latency over time
 - Feedback: thumbs up vs. down
