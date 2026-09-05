@@ -77,6 +77,18 @@ is background for anyone curious about the "why," not required reading.
 
 ## Monitoring & UI
 
+- **Piechart panels showed one solid slice labeled "value" instead of the actual
+  categories, live-reported and fixed**: all 4 piechart panels (feedback thumbs
+  up/down, retrieval method usage, relevance distribution, traditional-vs-agentic
+  usage) queried a `(metric, value)` pair per category via SQL, but their `options`
+  never set `reduceOptions`. Grafana's default for an omitted `reduceOptions` is
+  `{"values": false, "calcs": ["lastNotNull"]}`, which collapses the entire `value`
+  column into one calculated number and labels that single slice with the *field
+  name* ("value") — instead of treating each SQL row as its own slice labeled by the
+  `metric` column. Fixed by adding `"reduceOptions": {"values": true, "calcs":
+  ["lastNotNull"], "fields": ""}` to each piechart panel, which tells Grafana to use
+  each row as a separate slice. Verified visually on both the local stack and the
+  cloud-deployed instance after the dashboard JSON auto-reloaded.
 - **Grafana datasource hardcoded the default Postgres password, live-reported and
   fixed**: `monitoring/grafana/provisioning/datasources/postgres.yml` hardcoded
   `user: postgres` / `password: postgres` — matching the repo's default `.env`
